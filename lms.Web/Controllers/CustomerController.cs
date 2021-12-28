@@ -10,11 +10,21 @@ namespace lms.Web.Controllers
 {
     public class CustomerController : Controller
     {
+
+
         private ICustomerService _customerService;
 
         public CustomerController(ICustomerService customerService)
         {
             _customerService = customerService;
+        }
+
+
+        public IActionResult Index()
+        {
+           IEnumerable<Customer> customer= _customerService.GetAll();
+
+            return View(customer);
         }
 
         public IActionResult Create()
@@ -45,7 +55,31 @@ namespace lms.Web.Controllers
 
                 if (isSaved)
                 {
-                    return RedirectToAction("Details", customer);
+                    return RedirectToAction("Index","Customer");
+                }
+
+
+            }
+
+            return View();
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var customer = _customerService.GetById(id);
+            return View(customer);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Customer customer)
+        {
+            if (ModelState.IsValid)
+            {
+                bool isSaved = _customerService.Update(customer);
+
+                if (isSaved)
+                {
+                    return RedirectToAction("Index", "Customer");
                 }
 
 
@@ -55,6 +89,30 @@ namespace lms.Web.Controllers
         }
 
 
+        public IActionResult Delete(int id)
+        {
+            Customer customer = _customerService.GetById(id);
+            return View(customer);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirm(int id)
+        {
+            Customer customer = _customerService.GetById(id);
+            _customerService.Remove(customer);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
+        public IActionResult Details(int id)
+        {
+
+            Customer customer = _customerService.GetById(id);
+
+
+            return View(customer);
+        }
 
     }
 }
