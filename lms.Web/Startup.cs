@@ -1,4 +1,8 @@
 using Ims.Data;
+using lms.Repository;
+using lms.Repository.Contracts;
+using lms.Service;
+using lms.Service.Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,6 +33,10 @@ namespace lms.Web
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(
                 Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<ICustomerRepository, CustomerRepository>();
+
             services.AddControllersWithViews();
         }
 

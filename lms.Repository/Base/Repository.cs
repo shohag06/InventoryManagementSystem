@@ -14,7 +14,7 @@ namespace lms.Repository.Base
         private readonly ApplicationDbContext _db;
         public Repository(ApplicationDbContext db)
         {
-            _db = db;
+           this._db = db;
         }
 
         private DbSet<T> Table

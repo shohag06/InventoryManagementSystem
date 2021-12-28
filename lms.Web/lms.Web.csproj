@@ -9,10 +9,13 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Ims.Data\Ims.Data.csproj" />
+    <ProjectReference Include="..\lms.Model\lms.Model.csproj" />
+    <ProjectReference Include="..\lms.Service\lms.Service.csproj" />
   </ItemGroup>
 
 </Project>
