@@ -121,5 +121,21 @@ namespace lms.Web.Controllers
         }
 
 
+        public IActionResult Delete(int id)
+        {
+           Product Product = _productService.GetById(id);
+            return View(Product);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirm(int id)
+        {
+            Product Product = _productService.GetById(id);
+            _productService.Remove(Product);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
     }
 }

@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ims.Data", "Ims.Data\Ims.Data.csproj", "{433958FC-1CC4-4847-A198-13D824F402AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ims.Data", "Ims.Data\Ims.Data.csproj", "{433958FC-1CC4-4847-A198-13D824F402AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lms.Model", "lms.Model\lms.Model.csproj", "{53BDD167-FC85-43E0-BCE0-DAE070879BC0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lms.Model", "lms.Model\lms.Model.csproj", "{53BDD167-FC85-43E0-BCE0-DAE070879BC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lms.Repository", "lms.Repository\lms.Repository.csproj", "{217A1ECD-4888-4718-8ADD-AD42B0B2756F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lms.Repository", "lms.Repository\lms.Repository.csproj", "{217A1ECD-4888-4718-8ADD-AD42B0B2756F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lms.Service", "lms.Service\lms.Service.csproj", "{037E389C-EF7F-4354-9773-DDB088DCF7FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lms.Service", "lms.Service\lms.Service.csproj", "{037E389C-EF7F-4354-9773-DDB088DCF7FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lms.Web", "lms.Web\lms.Web.csproj", "{A788B41D-F312-4C2A-A72D-BB94F0823379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lms.Web", "lms.Web\lms.Web.csproj", "{A788B41D-F312-4C2A-A72D-BB94F0823379}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
