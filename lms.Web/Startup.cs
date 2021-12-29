@@ -1,3 +1,4 @@
+using AutoMapper;
 using Ims.Data;
 using lms.Repository;
 using lms.Repository.Contracts;
@@ -36,6 +37,14 @@ namespace lms.Web
 
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
+
+            services.AddTransient<ICategoryService, CategoryService>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IProductRepository, ProductRepository>();
+
+            services.AddAutoMapper();
 
             services.AddControllersWithViews();
         }

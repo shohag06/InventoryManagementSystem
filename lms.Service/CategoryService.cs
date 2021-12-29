@@ -10,7 +10,7 @@ namespace lms.Service
 {
     public class CategoryService:BaseService<Category>, ICategoryService
     {
-        private ICategoryRepository _categoryRepository;
+        //private ICategoryRepository _categoryRepository;
 
         public CategoryService(ICategoryRepository categoryRepository) : base(categoryRepository)
         {
