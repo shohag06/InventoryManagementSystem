@@ -14,7 +14,10 @@ namespace lms.Web.AutomapperConfiguration
         {
             CreateMap<ProductCreateViewModel, Product>();
             CreateMap<Product, ProductCreateViewModel>();
-          
+            CreateMap<ProductEditViewModel, Product>();
+            CreateMap<Product, ProductEditViewModel>();
+            CreateMap<Product, ProductViewModel>();
+
 
         }
     }

@@ -13,5 +13,6 @@ namespace lms.Model
         public bool IsActive { get; set; }
         public int? CategoryId { get; set; }
         public Category Category { get; set; }
+        
     }
 }

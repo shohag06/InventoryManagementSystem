@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lms.Web.Models.ProductVM
 {
-    public class ProductCreateViewModel
+    public class ProductEditViewModel
     {
         public string Name { get; set; }
         public double Price { get; set; }
@@ -21,6 +21,5 @@ namespace lms.Web.Models.ProductVM
 
 
         public ICollection<global::lms.Model.Product> ProductList { get; set; }
-
     }
 }
