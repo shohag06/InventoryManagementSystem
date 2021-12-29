@@ -1,4 +1,5 @@
 ﻿using lms.Model;
+using lms.Model.ViewModels;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,5 +20,6 @@ namespace Ims.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbQuery<VWOrderInfo> VwOrderInfos { get; set; }
     }
 }

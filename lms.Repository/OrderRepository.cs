@@ -1,5 +1,6 @@
 ﻿using Ims.Data;
 using lms.Model;
+using lms.Model.ViewModels;
 using lms.Repository.Base;
 using lms.Repository.Contracts;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +17,11 @@ namespace lms.Repository
         public OrderRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
+        }
+
+        public ICollection<VWOrderInfo> GetAllOrderSummary()
+        {
+            return _db.VwOrderInfos.ToList();
         }
 
         public override Order GetById(int id)
