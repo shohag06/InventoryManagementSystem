@@ -8,7 +8,7 @@ using System.Text;
 
 namespace lms.Service
 {
-    public class CategoryService:BaseService<Category>,ICategoryService
+    public class CategoryService:BaseService<Category>, ICategoryService
     {
         private ICategoryRepository _categoryRepository;
 
