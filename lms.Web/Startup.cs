@@ -44,6 +44,12 @@ namespace lms.Web
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IProductRepository, ProductRepository>();
 
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IOrderService, OrderService>();
+
+            services.AddTransient<IOrderDetailRepository, OrderDetailRepository>();
+            services.AddTransient<IOrderDetailService, OrderDetailService>();
+
             services.AddAutoMapper();
 
             services.AddControllersWithViews();
